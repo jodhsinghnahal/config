@@ -1,0 +1,43 @@
+ctrl-a #leader key
+
+tmux ls
+
+tmux detach
+tmux a
+tmux attch -t NewSession
+tmux new -s NewSession
+tmux kill-session -t <session-name> or <id>
+
+leader s #view sessions in tmux, j, k to move within
+
+leader | or -  #to split window into panes
+
+exit #exit tmux pane or terminal
+ctrl-d #also exit
+
+leader r #refresh tmux conf
+leader I #refrech plugins
+
+tmux kill-server 
+
+exec bash #restart bash
+source .bashrc
+
+leader m #maximize
+leader hjkl #resize
+
+ctrl hjkl #move b/w panes
+
+leader c #new window
+leader windowNumber #switch to that window
+leader , #rename window
+leader n or p #switch b/w windows
+leader w #view and switch windows or sessions
+
+#tmux session directory will be default directory for windows and panes
+
+leader [ #tmux copy mode
+#in copy mode:
+hjkl or shift hjkl #move
+ctrl ud fb #(downup half full page) 
+v #visual mode to select text
