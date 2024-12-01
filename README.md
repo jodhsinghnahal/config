@@ -32,17 +32,10 @@ to do reconfiguration:
 ```bash
 p10k configure
 ```
-
-```bash
-source ~/.zshrc
-```
-
 ---
 
 ```bash
 tmux source ~/.tmux.conf
-```
-```bash
 source ~/.zshrc
 ```
 
