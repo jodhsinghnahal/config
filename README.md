@@ -1,7 +1,7 @@
 # config
 
 ```bash
-sudo apt install i3 tmux zsh nvim
+sudo apt install i3 tmux zsh neovim
 sudo apt install git wget curl xclip
 sudo apt-get install nodejs ripgrep stow
 ```
