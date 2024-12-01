@@ -41,5 +41,3 @@ leader [ #tmux copy mode
 hjkl or shift hjkl #move
 ctrl ud fb #(downup half full page) 
 v #visual mode to select text
-
-https://dev.to/brandonwallace/how-to-use-vim-mode-on-the-command-line-in-bash-fnn
