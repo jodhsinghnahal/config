@@ -1,8 +1,4 @@
 # config
-config
-https://major.io/p/tray-icons-in-i3/
-
-# Dev Setup
 
 ```bash
 sudo apt install git wget curl xclip zsh
