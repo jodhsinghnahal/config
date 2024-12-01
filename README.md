@@ -1,7 +1,29 @@
 # config
 
+****
+
+On ubuntu 20 or 22: https://stackoverflow.com/questions/77530952/how-to-fix-the-version-issue-between-neovim-and-lazyvim-on-ubuntu-20-or-22-versi
 ```bash
-sudo apt install i3 tmux zsh neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+nvim
+sudo rm /usr/bin/nvim
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+nvim
+```
+else:
+
+```bash
+sudo apt install neovim
+```
+
+```bash
+sudo apt install i3 tmux zsh
 sudo apt install git wget curl xclip
 sudo apt-get install nodejs ripgrep stow
 ```
