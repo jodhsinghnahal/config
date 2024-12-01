@@ -21,6 +21,7 @@ else:
 ```bash
 sudo apt install neovim
 ```
+---
 
 ```bash
 sudo apt install i3 tmux zsh
