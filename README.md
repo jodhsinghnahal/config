@@ -42,6 +42,7 @@ sudo apt-get install nodejs ripgrep stow
 ```
 
 https://github.com/eza-community/eza/blob/main/INSTALL.md
+
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
 
 ```bash
