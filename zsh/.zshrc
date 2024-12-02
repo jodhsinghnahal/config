@@ -133,3 +133,7 @@ bindkey '^[[B' history-search-forward
 
 #bindkey 'k' history-search-backward
 #bindkey 'j' history-search-forward
+
+# ---- Eza (better ls) -----
+
+alias ls="eza --icons=always"
