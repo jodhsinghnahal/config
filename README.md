@@ -25,6 +25,13 @@ sudo apt install neovim
 ```
 ---
 
+https://www.nerdfonts.com/font-downloads
+```bash
+unzip Hack.zip -d ~/.fonts
+unzip Meslo.zip -d ~/.fonts
+fc-list
+```
+
 ```bash
 sudo add-apt-repository ppa:aslatter/ppa -y #ubuntu 22
 sudo apt install alacritty
