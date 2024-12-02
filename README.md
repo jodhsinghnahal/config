@@ -41,6 +41,8 @@ sudo apt install git wget curl xclip
 sudo apt-get install nodejs ripgrep stow
 ```
 
+https://github.com/eza-community/eza/blob/main/INSTALL.md
+
 ---
 
 ```bash
