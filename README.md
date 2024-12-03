@@ -47,7 +47,7 @@ https://github.com/eza-community/eza/blob/main/INSTALL.md
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #oh my zsh
-sudo chsh -s /bin/zsh $USER
+sudo chsh -s $(which zsh) $USER
 ```
 
 ---
