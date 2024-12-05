@@ -76,3 +76,6 @@ tmux source ~/.tmux.conf
 source ~/.zshrc
 ```
 
+https://yazi-rs.github.io/docs/installation/#cargo
+
+https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
