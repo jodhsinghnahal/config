@@ -79,3 +79,7 @@ source ~/.zshrc
 https://yazi-rs.github.io/docs/installation/#cargo
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
+
+```bash
+stow i3 alacritty nvim polybar tmux zsh
+```
