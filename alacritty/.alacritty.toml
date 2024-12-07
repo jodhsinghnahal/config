@@ -9,7 +9,8 @@ TERM = "xterm-256color"
 padding.x = 5
 padding.y = 5
 
-decorations = "Full"
+#decorations = "Full"
+decorations = "None"
 
 opacity = 0.7
 blur = true

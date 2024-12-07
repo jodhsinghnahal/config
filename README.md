@@ -81,5 +81,10 @@ https://yazi-rs.github.io/docs/installation/#cargo
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
 ```bash
+export export EDITOR=nvim
+```
+
+```bash
 stow i3 alacritty nvim polybar tmux zsh
+export export EDITOR=nvim
 ```

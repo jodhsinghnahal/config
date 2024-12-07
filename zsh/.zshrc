@@ -142,3 +142,5 @@ alias ls="eza --icons=always"
 eval "$(zoxide init zsh)"
 
 alias cd="z"
+alias yz="yazi"
+alias lz="lazygit" 
