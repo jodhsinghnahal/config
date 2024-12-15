@@ -71,11 +71,6 @@ p10k configure
 ```
 ---
 
-```bash
-tmux source ~/.tmux.conf
-source ~/.zshrc
-```
-
 https://yazi-rs.github.io/docs/installation/#cargo
 
 ```bash
@@ -87,4 +82,10 @@ https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
 ```bash
 stow i3 alacritty nvim polybar tmux zsh
+```
+
+```bash
+tmux source ~/.tmux.conf
+source ~/.zshrc
+alt+shift+r #reload i3
 ```
