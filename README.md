@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:aslatter/ppa -y #ubuntu 22
 sudo apt install alacritty
 
 sudo apt install i3 tmux zsh
-sudo apt install git wget curl xclip
+sudo apt install git wget curl xclip fd-find
 sudo apt-get install nodejs ripgrep stow
 ```
 
