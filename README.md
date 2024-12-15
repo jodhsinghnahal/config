@@ -78,6 +78,10 @@ source ~/.zshrc
 
 https://yazi-rs.github.io/docs/installation/#cargo
 
+```bash
+. "$HOME/.cargo/env" #after installing cargo for yazi
+```
+
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
 ```bash
