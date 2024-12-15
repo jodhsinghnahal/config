@@ -81,10 +81,6 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
 ```bash
-stow i3 alacritty nvim polybar tmux zsh
-```
-
-```bash
 tmux source ~/.tmux.conf
 ctrl-a r #reload tmux
 ctr-a shift-i #reload plugins
