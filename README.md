@@ -80,6 +80,7 @@ https://yazi-rs.github.io/docs/installation/#cargo
 
 ```bash
 . "$HOME/.cargo/env" #after installing rustup for yazi
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh #install zoxide for batter cd
 ```
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
