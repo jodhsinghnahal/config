@@ -86,6 +86,8 @@ stow i3 alacritty nvim polybar tmux zsh
 
 ```bash
 tmux source ~/.tmux.conf
+ctrl-a r #reload tmux
+ctr-a shift-i #reload plugins
 source ~/.zshrc
 alt+shift+r #reload i3
 ```
