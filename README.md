@@ -75,6 +75,7 @@ https://yazi-rs.github.io/docs/installation/#cargo
 
 ```bash
 . "$HOME/.cargo/env" #after installing rustup for yazi
+#use . to toggle dotfiles in yazi
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh #install zoxide for batter cd
 ```
 
@@ -86,4 +87,10 @@ ctrl-a r #reload tmux
 ctr-a shift-i #reload plugins
 source ~/.zshrc
 alt+shift+r #reload i3
+In nvim:
+:Lazy
+:Lazy reload ...
+:qa #exit all nvim
+:Mason # use i to install and X to delete
+:TSInstall # install treesitter for language
 ```
