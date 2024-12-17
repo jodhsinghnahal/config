@@ -1,8 +1,9 @@
 # config
 
-****
+---
 
 On ubuntu 20 or 22: https://stackoverflow.com/questions/77530952/how-to-fix-the-version-issue-between-neovim-and-lazyvim-on-ubuntu-20-or-22-versi
+
 ```bash
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -18,14 +19,17 @@ sudo rm /usr/bin/nvim
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 ```
+
 else:
 
 ```bash
 sudo apt install neovim
 ```
+
 ---
 
 https://www.nerdfonts.com/font-downloads
+
 ```bash
 unzip Hack.zip -d ~/.fonts
 unzip Meslo.zip -d ~/.fonts
@@ -69,6 +73,7 @@ to do reconfiguration:
 ```bash
 p10k configure
 ```
+
 ---
 
 https://yazi-rs.github.io/docs/installation/#cargo
@@ -77,6 +82,8 @@ https://yazi-rs.github.io/docs/installation/#cargo
 . "$HOME/.cargo/env" #after installing rustup for yazi
 #use . to toggle dotfiles in yazi
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh #install zoxide for batter cd
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash #install npm for node
+nvm install v22
 ```
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
