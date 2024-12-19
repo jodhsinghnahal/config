@@ -26,6 +26,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "clangd",
+        "bashls",
         "ts_ls",
         "html",
         "cssls",
@@ -43,6 +44,8 @@ return {
       ensure_installed = {
         "clang-format",
         "cpplint",
+        "shellcheck",
+        "beautysh",
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "isort", -- python formatter

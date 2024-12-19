@@ -3,7 +3,7 @@ vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt -- for conciseness
 
 opt.scrolloff = 999
-opt.sidescrolloff = 999
+opt.sidescrolloff = 9
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers

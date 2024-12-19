@@ -22,6 +22,8 @@ return {
         python = { "isort", "black" },
         cpp = { "clang-format" },
         c = { "clang-format" },
+        bash = { "beautysh" },
+        zsh = { "beautysh" },
       },
       format_on_save = {
         lsp_fallback = true,

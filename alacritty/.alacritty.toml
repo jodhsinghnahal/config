@@ -21,3 +21,8 @@ blur = true
 normal.family = "Hack Nerd Font Mono"
 
 size = 18
+
+[keyboard]
+bindings = [
+{ key = "v", mods = "Control", action = "Paste" },
+]
