@@ -43,7 +43,13 @@ sudo apt install alacritty
 sudo apt install i3 tmux zsh
 sudo apt install git wget curl xclip fd-find
 sudo apt-get install nodejs ripgrep stow
-sudo apt install xdotool maim
+sudo apt install xdotool maim brightnessctl
+```
+
+```bash
+xev # to check keys
+sudo usermod -aG video $USER
+sudo reboot
 ```
 
 https://github.com/eza-community/eza/blob/main/INSTALL.md
@@ -90,6 +96,8 @@ nvm install v22
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
 https://github.com/jodhsinghnahal/tmux-polybar
+
+https://www.reddit.com/r/i3wm/comments/jk3y5m/i3_brightness_keys_not_working/
 
 ```bash
 tmux source ~/.tmux.conf
