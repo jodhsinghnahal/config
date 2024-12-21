@@ -11,6 +11,7 @@
 
 set $mod Mod1
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+# bindsym $mod+d exec rofi -show combi
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
