@@ -93,12 +93,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash #
 nvm install v22
 ```
 
-https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
-
-https://github.com/jodhsinghnahal/tmux-polybar
-
-https://www.reddit.com/r/i3wm/comments/jk3y5m/i3_brightness_keys_not_working/
-
 ```bash
 tmux source ~/.tmux.conf
 ctrl-a r #reload tmux

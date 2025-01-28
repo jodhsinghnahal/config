@@ -20,7 +20,7 @@ blur = true
 [font]
 normal.family = "Hack Nerd Font Mono"
 
-size = 18
+size = 13
 
 [keyboard]
 bindings = [

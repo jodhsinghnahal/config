@@ -2,6 +2,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt -- for conciseness
 
+opt.undofile = true
+opt.undodir = vim.fn.stdpath("data") .. "/undo"
+opt.laststatus = 3
 opt.scrolloff = 999
 opt.sidescrolloff = 9
 
