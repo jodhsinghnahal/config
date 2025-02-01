@@ -77,7 +77,7 @@ keymap.set("n", "<leader>rw", ":%s//g<Left><Left>", { desc = "Replace in file" }
 keymap.set("v", "<leader>r", ":s//g<Left><Left>", { desc = "Replace in selection" })
 keymap.set("v", "q", "<Esc>", { noremap = true, silent = true })
 
-keymap.set("n", "<leader>a", "VggG", { desc = "select all" })
+keymap.set("n", "<leader>a", "ggVG", { desc = "select all" })
 -- keymap.set("n", "E", "$", { noremap = false })
 -- keymap.set("n", "B", "^", { noremap = false })
 -- keymap.set("n", "TT", ":TransparentToggle<CR>", { noremap = true })
