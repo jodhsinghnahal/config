@@ -59,16 +59,12 @@ keymap.set("n", "<leader>e", ":e #<enter>", { noremap = false, desc = "Open the 
 
 keymap.set(
   "n",
-  "<leader><",
+  -- "<leader><",
+  "<",
   ":BufferLineMovePrev<CR>",
   { noremap = true, silent = true, desc = "Move buffer to the left" }
 )
-keymap.set(
-  "n",
-  "<leader>>",
-  ":BufferLineMoveNext<CR>",
-  { noremap = true, silent = true, desc = "Move buffer to the right" }
-)
+keymap.set("n", ">", ":BufferLineMoveNext<CR>", { noremap = true, silent = true, desc = "Move buffer to the right" })
 
 -- files
 -- keymap.set("n", "QQ", ":q!<enter>", { noremap = false })
@@ -80,6 +76,8 @@ keymap.set({ "n", "v", "x" }, "<s-k>", "<c-u>", { noremap = false })
 keymap.set("n", "<leader>rw", ":%s//g<Left><Left>", { desc = "Replace in file" })
 keymap.set("v", "<leader>r", ":s//g<Left><Left>", { desc = "Replace in selection" })
 keymap.set("v", "q", "<Esc>", { noremap = true, silent = true })
+
+keymap.set("n", "<leader>a", "VggG", { desc = "select all" })
 -- keymap.set("n", "E", "$", { noremap = false })
 -- keymap.set("n", "B", "^", { noremap = false })
 -- keymap.set("n", "TT", ":TransparentToggle<CR>", { noremap = true })

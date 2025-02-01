@@ -98,6 +98,7 @@ https://github.com/jodhsinghnahal/tmux-polybar
 
 https://www.reddit.com/r/i3wm/comments/jk3y5m/i3_brightness_keys_not_working/
 
+https://github.com/hluk/CopyQ
 ```
 
 ```bash

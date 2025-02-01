@@ -8,6 +8,13 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+bindsym $mod+c exec --no-startup-id copyq show
+
+for_window [instance="copyq"] floating enable
+for_window [instance="copyq"] resize set 1000 600
+for_window [instance="copyq"] border pixel 5
+
+exec copyq
 
 set $mod Mod1
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh

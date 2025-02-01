@@ -14,7 +14,11 @@ return {
     })
 
     function lol()
+      local buf_id = vim.api.nvim_get_current_buf()
+      print("Current buffer ID:", buf_id)
+
       vim.cmd("bfirst")
+
       local filepath = vim.fn.stdpath("data") .. "/buffer_order.txt"
 
       local file_content = vim.fn.readfile(filepath)
@@ -51,6 +55,13 @@ return {
       reorder_with_swaps(json_data2_ids, buffer_info_ids)
       -- print(vim.inspect(buffer_info))
       print("lol" .. filepath)
+      while vim.api.nvim_get_current_buf() ~= buf_id do
+        print("werewrsdf")
+        -- vim.defer_fn(function()
+        vim.cmd("BufferLineCycleNext")
+        -- vim.wait(1000)
+        -- end, 2000)
+      end
     end
 
     local function shallow_copy(original)
