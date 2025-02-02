@@ -67,7 +67,22 @@ return {
           -- { "filename", path = 3 },
         },
 
-        lualine_c = { { "filename", path = 1 } },
+        lualine_c = {
+          { "filename", path = 1 },
+          -- {
+          --   require("tmux-status").tmux_windows,
+          --   cond = require("tmux-status").show,
+          --   padding = { left = 3 },
+          -- },
+        },
+        -- lualine_z = {
+        --   -- ...other lualine components
+        --   {
+        --     require("tmux-status").tmux_session,
+        --     cond = require("tmux-status").show,
+        --     padding = { left = 3 },
+        --   },
+        -- },
         -- lualine_a = {
         -- {
         -- "filename",

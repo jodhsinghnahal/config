@@ -22,12 +22,12 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym s+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
 ## Clipboard Screenshots
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+s+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-

@@ -4,7 +4,7 @@ local opt = vim.opt -- for conciseness
 
 opt.undofile = true
 opt.undodir = vim.fn.stdpath("data") .. "/undo"
-opt.laststatus = 3
+opt.laststatus = 2
 opt.scrolloff = 999
 opt.sidescrolloff = 9
 

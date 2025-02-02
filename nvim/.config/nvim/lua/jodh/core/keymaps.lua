@@ -69,7 +69,7 @@ keymap.set("n", ">", ":BufferLineMoveNext<CR>", { noremap = true, silent = true,
 -- files
 -- keymap.set("n", "QQ", ":q!<enter>", { noremap = false })
 -- keymap.set("n", "WW", ":w!<enter>", { noremap = false })
-keymap.set({ "n", "v", "x" }, "E", "$", { noremap = false })
+keymap.set({ "n", "v", "o" }, "E", "$", { noremap = false })
 keymap.set("n", "W", "%", { noremap = false })
 keymap.set({ "n", "v", "x" }, "<s-j>", "<c-d>", { noremap = false })
 keymap.set({ "n", "v", "x" }, "<s-k>", "<c-u>", { noremap = false })
