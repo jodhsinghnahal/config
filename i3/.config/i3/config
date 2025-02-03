@@ -210,4 +210,5 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 exec_always --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-
+#disbale paste from middle scroll click
+exec_always --no-startup-id mousepasteblock &
