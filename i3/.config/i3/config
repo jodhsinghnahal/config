@@ -8,6 +8,10 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+#make border for all
+for_window [class=.*] border normal 1
+
 bindsym $mod+c exec --no-startup-id copyq show
 
 for_window [instance="copyq"] floating enable
