@@ -1,5 +1,25 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+-- autosave
+local autosave_enabled = false
+
+function ToggleAutosave()
+  if autosave_enabled then
+    vim.api.nvim_del_augroup_by_name("AutosaveGroup")
+    print("Autosave OFF")
+  else
+    local group = vim.api.nvim_create_augroup("AutosaveGroup", { clear = true })
+    vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+      pattern = { "*" },
+      command = "silent! wall",
+      nested = true,
+      group = group,
+    })
+    print("Autosave ON")
+  end
+  autosave_enabled = not autosave_enabled
+end
+
 local opt = vim.opt -- for conciseness
 
 opt.undofile = true

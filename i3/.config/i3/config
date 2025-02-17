@@ -12,7 +12,7 @@
 #make border for all
 for_window [class=.*] border normal 1
 
-bindsym $mod+c exec --no-startup-id copyq show
+bindsym $mod+v exec --no-startup-id copyq show
 
 for_window [instance="copyq"] floating enable
 for_window [instance="copyq"] resize set 1000 600
@@ -215,6 +215,17 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 exec_always --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always --no-startup-id xinput --set-prop 11 'libinput Accel Speed' 0.85
+
+exec_always for id in $(xinput list | grep "ydotool.*pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1; done
+bindsym $mod+i exec hints
+# bindsym $mod+y exec hints --mode scroll
+
+# exec_always sudo ydotoold
+# exec_always sudo chmod 666 /tmp/.ydotool_socket
+exec_always sudo chmod 666  /run/user/$UID/.ydotool_socket
+
+exec --no-startup-id picom 
+exec --no-startup-id feh --bg-scale ~/config/BLACK.PNG
 
 #disbale paste from middle scroll click
 exec --no-startup-id xmousepasteblock

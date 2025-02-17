@@ -43,7 +43,7 @@ sudo apt install alacritty
 sudo apt install i3 tmux zsh
 sudo apt install git wget curl xclip fd-find
 sudo apt-get install nodejs ripgrep stow
-sudo apt install xdotool maim brightnessctl
+sudo apt install xdotool maim brightnessctl picom
 ```
 
 ```bash

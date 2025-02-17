@@ -43,7 +43,7 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- 
 -- keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 -- keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>n", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader>p", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+-- keymap.set("n", "<leader>p", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>o", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- buffers
@@ -59,12 +59,16 @@ keymap.set("n", "<leader>e", ":e #<enter>", { noremap = false, desc = "Open the 
 
 keymap.set(
   "n",
-  -- "<leader><",
-  "<",
+  "<leader><",
   ":BufferLineMovePrev<CR>",
   { noremap = true, silent = true, desc = "Move buffer to the left" }
 )
-keymap.set("n", ">", ":BufferLineMoveNext<CR>", { noremap = true, silent = true, desc = "Move buffer to the right" })
+keymap.set(
+  "n",
+  "<leader>>",
+  ":BufferLineMoveNext<CR>",
+  { noremap = true, silent = true, desc = "Move buffer to the right" }
+)
 
 -- files
 -- keymap.set("n", "QQ", ":q!<enter>", { noremap = false })
@@ -82,3 +86,6 @@ keymap.set("n", "<leader>a", "ggVG", { desc = "select all" })
 -- keymap.set("n", "B", "^", { noremap = false })
 -- keymap.set("n", "TT", ":TransparentToggle<CR>", { noremap = true })
 -- keymap.set("n", "ss", ":noh<CR>", { noremap = true })
+
+-- Keymap to toggle autosave
+keymap.set("n", "<leader>x", ":lua ToggleAutosave()<CR>", { desc = "autosave" })

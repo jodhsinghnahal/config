@@ -153,14 +153,6 @@ alias yz="y"
 
 alias nv="nvim"
 
-tmux() {
-    if [[ "$1" == "d" ]]; then
-        command tmux detach
-    else
-        command tmux "$@"
-    fi
-}
-
 #for yazi
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -178,3 +170,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 bindkey -M viins 'jk' vi-cmd-mode
+
+alias ifconfig='/sbin/ifconfig'
