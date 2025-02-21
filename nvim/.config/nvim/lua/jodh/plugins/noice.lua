@@ -1,6 +1,6 @@
 return {
   "folke/noice.nvim",
-  event = "VeryLazy",
+  -- event = "VeryLazy",
   opts = {
     -- add any options here
     scrollbar = false,
@@ -11,7 +11,7 @@ return {
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
+    -- "rcarriga/nvim-notify",
   },
   config = function()
     require("noice").setup({
@@ -29,6 +29,7 @@ return {
           scrollbar = false,
         },
         messages = {
+          -- enabled = false,
           scrollbar = false,
         },
       },

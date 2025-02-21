@@ -55,12 +55,13 @@ return {
       reorder_with_swaps(json_data2_ids, buffer_info_ids)
       -- print(vim.inspect(buffer_info))
       print("lol" .. filepath)
-      while vim.api.nvim_get_current_buf() ~= buf_id do
-        print("werewrsdf")
-        -- vim.defer_fn(function()
+      local max_attempts = 100
+      local attempts = 0
+
+      while vim.api.nvim_get_current_buf() ~= buf_id and attempts < max_attempts do
+        print("Switching buffers... attempt " .. attempts)
         vim.cmd("BufferLineCycleNext")
-        -- vim.wait(1000)
-        -- end, 2000)
+        attempts = attempts + 1
       end
     end
 

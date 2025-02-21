@@ -1,7 +1,3 @@
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -169,6 +165,14 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 bindkey -M viins 'jk' vi-cmd-mode
 
+# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+#     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+# fi
+alias t='exec tmux new-session -A -s ${USER} >/dev/null 2>&1'
+
 alias ifconfig='/sbin/ifconfig'
+setopt nonomatch
+source /etc/zsh_command_not_found

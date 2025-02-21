@@ -19,6 +19,11 @@ sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 sudo rm /usr/bin/nvim
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
+#neovim on older glibc
+https://github.com/neovim/neovim-releases?tab=readme-ov-file
+#or install from source
+https://forums.raspberrypi.com/viewtopic.php?t=180325
+https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source
 ```
 
 else:
@@ -87,11 +92,18 @@ p10k configure
 https://yazi-rs.github.io/docs/installation/#cargo
 
 ```bash
+#older glibc yazi
+wget https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-musl.zip
+unzip yazi-x86_64-unknown-linux-musl.zip -d yazi
+sudo mv yazi /usr/local/bin
+sudo mv ya /usr/local/bin
+
 . "$HOME/.cargo/env" #after installing rustup for yazi
 #use . to toggle dotfiles in yazi
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh #install zoxide for batter cd
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash #install npm for node
-nvm install v22
+#nvm install v22
+nvm install v16.20.2
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 
