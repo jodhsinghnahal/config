@@ -78,6 +78,8 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/jeffreytse/zsh-vi-mode \
+  $ZSH_CUSTOM/plugins/zsh-vi-mode
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -117,6 +119,9 @@ https://github.com/milaq/XMousePasteBlock
 ```
 
 ```bash
+sudo visudo #and add line:
+jodh ALL=(ALL) NOPASSWD: /home/jodh/config/dmenu-sudo
+
 tmux source ~/.tmux.conf
 ctrl-a r #reload tmux
 ctr-a shift-i #reload plugins

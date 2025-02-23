@@ -5,10 +5,11 @@ local keymap = vim.keymap -- for concisenss
 ---------------------
 -- General Keymaps -------------------
 
--- use jk to exit insert mode
+-- use jk to exit insert mode and q exit visual
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("c", "jk", "<C-c>", { desc = "Exit command mode with jk" })
 -- keymap.set("t", "jk", "<ESC>", { desc = "Exit command mode with jk" })
+keymap.set("v", "q", "<Esc>", { noremap = true, silent = true })
 
 -- clear search highlights
 -- keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -79,7 +80,6 @@ keymap.set({ "n", "v", "x" }, "<s-j>", "<c-d>", { noremap = false })
 keymap.set({ "n", "v", "x" }, "<s-k>", "<c-u>", { noremap = false })
 keymap.set("n", "<leader>rw", ":%s//g<Left><Left>", { desc = "Replace in file" })
 keymap.set("v", "<leader>r", ":s//g<Left><Left>", { desc = "Replace in selection" })
-keymap.set("v", "q", "<Esc>", { noremap = true, silent = true })
 
 keymap.set("n", "<leader>a", "ggVG", { desc = "select all" })
 -- keymap.set("n", "E", "$", { noremap = false })

@@ -1,3 +1,4 @@
+export EDITOR="nvim"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -77,7 +78,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,7 +117,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-set -o vi
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -126,13 +126,6 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
-
-# completion using arrow keys (based on history)
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
-
-#bindkey 'k' history-search-backward
-#bindkey 'j' history-search-forward
 
 # ---- Eza (better ls) -----
 
@@ -145,9 +138,8 @@ alias cd="z"
 
 alias lz="lazygit"
 
-alias yz="y"
-
 alias nv="nvim"
+alias snv="sudo -E nvim"
 
 #for yazi
 function y() {
@@ -159,19 +151,25 @@ function y() {
     rm -f -- "$tmp"
 }
 
-export EDITOR="nvim"
-
 #for node and nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-bindkey -M viins 'jk' vi-cmd-mode
-
-# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-#     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
-# fi
 alias t='exec tmux new-session -A -s ${USER} >/dev/null 2>&1'
+alias tk='tmux kill-server'
+
+# completion using arrow keys (based on history)
+# bindkey '^[[A' history-search-backward
+# bindkey '^[[B' history-search-forward
+bindkey -M vicmd 'j' history-beginning-search-forward
+bindkey -M vicmd 'k' history-beginning-search-backward
+bindkey -M vicmd 'J' down-line-or-history
+bindkey -M vicmd 'K' up-line-or-history
+
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+ZVM_VI_VISUAL_ESCAPE_BINDKEY=q
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 alias ifconfig='/sbin/ifconfig'
 setopt nonomatch

@@ -78,6 +78,8 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+Shift+d exec --no-startup-id sudo /home/jodh/config/dmenu-sudo
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -222,7 +224,7 @@ bindsym $mod+i exec hints
 
 # exec_always sudo ydotoold
 # exec_always sudo chmod 666 /tmp/.ydotool_socket
-exec_always sudo chmod 666  /run/user/$UID/.ydotool_socket
+# exec_always sudo chmod 666  /run/user/$UID/.ydotool_socket
 
 exec --no-startup-id picom 
 exec --no-startup-id feh --bg-scale ~/config/BLACK.PNG
