@@ -106,6 +106,9 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash #install npm for node
 #nvm install v22
 nvm install v16.20.2
+pip install cmakelang
+
+https://www.kicksecure.com/wiki/Command-not-found
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
 

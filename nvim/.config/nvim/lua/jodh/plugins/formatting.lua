@@ -24,6 +24,7 @@ return {
         c = { "clang-format" },
         bash = { "beautysh" },
         zsh = { "beautysh" },
+        cmake = { "cmake_format" },
       },
       format_on_save = {
         lsp_fallback = true,
