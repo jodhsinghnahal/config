@@ -76,4 +76,4 @@ show full path and tabs lualine
 ctrl-g ctrl-t in find /
 marks : m-B, 'B
 rmv tabby
-visual mode go both ways
+visual mode go both ways: use o
