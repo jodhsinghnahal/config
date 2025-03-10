@@ -42,7 +42,7 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "clang-format",
+        -- "clang-format",
         "cpplint",
         "shellcheck",
         "beautysh",
