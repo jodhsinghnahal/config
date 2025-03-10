@@ -125,6 +125,7 @@ https://github.com/milaq/XMousePasteBlock
 sudo visudo #and add line:
 jodh ALL=(ALL) NOPASSWD: /home/jodh/config/dmenu-sudo
 ~/.local/share/nvim #contains stored nvim data like undo, sessions and buffer order
+:noa w # write without formatting
 
 tmux source ~/.tmux.conf
 ctrl-a r #reload tmux

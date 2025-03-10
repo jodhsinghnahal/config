@@ -176,4 +176,8 @@ setopt nonomatch
 source /etc/zsh_command_not_found
 
 source /opt/ros/humble/setup.zsh
-source /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.zsh
+source ~/RoverFlake/install/setup.zsh
+
+# argcomplete for ros2 & colcon
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
