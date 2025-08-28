@@ -26,23 +26,23 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "clangd",
-        "bashls",
-        "ts_ls",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "svelte",
-        "lua_ls",
-        "graphql",
-        "emmet_ls",
-        "prismals",
+        -- "bashls",
+        -- "ts_ls",
+        -- "html",
+        -- "cssls",
+        -- "tailwindcss",
+        -- "svelte",
+        -- "lua_ls",
+        -- "graphql",
+        -- "emmet_ls",
+        -- "prismals",
         "pyright",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "clang-format",
+        -- "clang-format",
         "cpplint",
         "shellcheck",
         "beautysh",

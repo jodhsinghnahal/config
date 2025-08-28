@@ -3,6 +3,12 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
+    vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+      pattern = { "SConstruct", "SConscript", "*.scons" },
+      callback = function()
+        vim.bo.filetype = "python"
+      end,
+    })
 
     conform.setup({
       formatters_by_ft = {

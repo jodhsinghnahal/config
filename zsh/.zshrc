@@ -174,3 +174,4 @@ ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 alias ifconfig='/sbin/ifconfig'
 setopt nonomatch
 source /etc/zsh_command_not_found
+export PATH=$HOME/bin:$PATH
