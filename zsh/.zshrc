@@ -175,3 +175,10 @@ alias ifconfig='/sbin/ifconfig'
 setopt nonomatch
 source /etc/zsh_command_not_found
 export PATH=$HOME/bin:$PATH
+
+source /opt/ros/humble/setup.zsh
+source ~/RoverFlake/install/setup.zsh
+
+# argcomplete for ros2 & colcon
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"

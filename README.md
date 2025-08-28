@@ -66,7 +66,7 @@ https://github.com/eza-community/eza/blob/main/INSTALL.md
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #oh my zsh
 sudo chsh -s $(which zsh) $USER
 
-sudo apt install polybar
+sudo apt install polybar feh
 ```
 
 ---
@@ -125,6 +125,7 @@ https://github.com/milaq/XMousePasteBlock
 sudo visudo #and add line:
 jodh ALL=(ALL) NOPASSWD: /home/jodh/config/dmenu-sudo
 ~/.local/share/nvim #contains stored nvim data like undo, sessions and buffer order
+:noa w # write without formatting
 
 tmux source ~/.tmux.conf
 ctrl-a r #reload tmux
