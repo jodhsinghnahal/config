@@ -20,6 +20,100 @@ function ToggleAutosave()
   autosave_enabled = not autosave_enabled
 end
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.hwk",
+  command = "set filetype=lua",
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function(args)
+    local bufnr = args.buf
+
+    vim.api.nvim_buf_attach(bufnr, false, {
+      utf_sizes = true, -- enables `deleted_codepoints` and `codeunits` in on_lines
+
+      on_lines = function(
+        event,
+        buf,
+        changedtick,
+        firstline,
+        lastline,
+        new_lastline,
+        bytecount,
+        deleted_codepoints,
+        deleted_codeunits
+      )
+        local lines = vim.api.nvim_buf_get_lines(buf, firstline, new_lastline, false)
+        -- vim.notify(
+        --   ("[on_lines]\n  event: %s\n  buf: %d\n  tick: %d\n  range: %d-%d → %d\n  bytecount: %d\n  codepoints: %s\n  codeunits: %s\n  lines: %s"):format(
+        --     event,
+        --     buf,
+        --     changedtick,
+        --     firstline,
+        --     lastline,
+        --     new_lastline,
+        --     bytecount,
+        --     vim.inspect(deleted_codepoints),
+        --     vim.inspect(deleted_codeunits),
+        --     vim.inspect(lines)
+        --   )
+        -- )
+      end,
+
+      on_bytes = function(
+        event,
+        buf,
+        changedtick,
+        start_row,
+        start_col,
+        start_byte,
+        old_end_row,
+        old_end_col,
+        old_end_byte,
+        new_end_row,
+        new_end_col,
+        new_end_byte
+      )
+        vim.fn.rpcnotify(
+          0,
+          "onbytes",
+          event,
+          buf,
+          changedtick,
+          start_row,
+          start_col,
+          start_byte,
+          old_end_row,
+          old_end_col,
+          old_end_byte,
+          new_end_row,
+          new_end_col,
+          new_end_byte
+        )
+        -- print(
+        --   (
+        --     "[on_bytes]\n  event: %s\n  buf: %d\n  tick: %d\n"
+        --     .. "  start: (%d, %d, byte %d)\n  old_end: (%d, %d, byte %d)\n  new_end: (%d, %d, byte %d)"
+        --   ):format(
+        --     event,
+        --     buf,
+        --     changedtick,
+        --     start_row,
+        --     start_col,
+        --     start_byte,
+        --     old_end_row,
+        --     old_end_col,
+        --     old_end_byte,
+        --     new_end_row,
+        --     new_end_col,
+        --     new_end_byte
+        --   )
+        -- )
+      end,
+    })
+  end,
+})
+
 local opt = vim.opt -- for conciseness
 
 opt.undofile = true
@@ -33,8 +127,8 @@ opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
+opt.shiftwidth = 4 -- 4 spaces for indent width (autoindent)
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 

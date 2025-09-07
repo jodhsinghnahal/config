@@ -2,6 +2,17 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for concisenss
 
+-- vim.g.clipboard = {
+--   name = "OSC 52",
+--   copy = {
+--     ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+--     ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+--   },
+--   paste = {
+--     ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+--     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+--   },
+-- }
 ---------------------
 -- General Keymaps -------------------
 
@@ -58,6 +69,8 @@ keymap.set("n", "<s-h>", ":BufferLineCyclePrev<enter>", { noremap = false, desc 
 
 keymap.set("n", "<leader>d", ":bdelete<enter>", { noremap = false, desc = "Delete the current buffer" })
 keymap.set("n", "<leader>e", ":e #<enter>", { noremap = false, desc = "Open the alternate file" })
+
+keymap.set("n", "o", "A<enter>", { noremap = true, desc = "new line" })
 
 keymap.set(
   "n",
