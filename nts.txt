@@ -77,3 +77,10 @@ ctrl-g ctrl-t in find /
 marks : m-B, 'B
 rmv tabby
 visual mode go both ways: use o
+
+Todo:
+show word count of selected text or full file
+open file from lazygit in nvim
+do previos macro and saving macros
+paste using "0p with other keybind, so it only paste yanked register, not deleted text that was copied
+show ui like autocomplete and which key when recording macro

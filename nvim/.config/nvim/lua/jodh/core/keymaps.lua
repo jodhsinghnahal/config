@@ -58,6 +58,8 @@ keymap.set("n", "<s-h>", ":BufferLineCyclePrev<enter>", { noremap = false, desc 
 keymap.set("n", "<leader>d", ":bdelete<enter>", { noremap = false, desc = "Delete the current buffer" })
 keymap.set("n", "<leader>e", ":e #<enter>", { noremap = false, desc = "Open the alternate file" })
 
+keymap.set("n", "o", "A<enter>", { noremap = true, desc = "new line" })
+
 keymap.set(
   "n",
   "<leader><",
