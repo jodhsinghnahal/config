@@ -70,21 +70,23 @@ return {
         mappings = {
           n = {
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-            ["dd"] = require("telescope.actions").delete_buffer,
+            -- ["dd"] = require("telescope.actions").delete_buffer,
             ["q"] = require("telescope.actions").close,
+            ["<C-j>"] = actions.cycle_history_next,
+            ["<C-k>"] = actions.cycle_history_prev,
           },
           i = {
             ["<C-space>"] = actions.to_fuzzy_refine,
-            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            -- ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+            -- ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<CR>"] = actions.select_default,
             ["<C-o>"] = actions.select_tab,
             ["<C-h>"] = actions.select_horizontal,
             ["<C-v>"] = actions.select_vertical,
             ["<C-s>"] = actions.toggle_all,
-            ["<C-n>"] = actions.cycle_history_next,
-            ["<C-p>"] = actions.cycle_history_prev,
+            ["<C-j>"] = actions.cycle_history_next,
+            ["<C-k>"] = actions.cycle_history_prev,
             -- ["<C-s>"] = actions.select_all,
           },
         },
