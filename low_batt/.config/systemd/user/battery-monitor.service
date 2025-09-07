@@ -1,0 +1,14 @@
+[Unit]
+Description=Battery Monitor Notification Script
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+ExecStart=/home/jodh/low_batt.zsh
+Restart=always
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+[Install]
+WantedBy=graphical-session.target

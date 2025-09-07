@@ -56,6 +56,14 @@ sudo apt install xdotool maim brightnessctl picom luarocks
 xev # to check keys
 sudo usermod -aG video $USER
 sudo reboot
+chmod +x low_batt/low_batt.zsh
+systemctl --user daemon-reexec
+systemctl --user daemon-reload
+systemctl --user enable battery-monitor.service
+systemctl --user start battery-monitor.service
+stow low_batt
+sudo apt install magnus
+https://askubuntu.com/questions/1383209/how-do-i-prevent-the-program-magnus-from-popping-up-upon-every-login
 ```
 
 https://github.com/eza-community/eza/blob/main/INSTALL.md

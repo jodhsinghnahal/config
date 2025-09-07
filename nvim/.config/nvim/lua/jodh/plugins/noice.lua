@@ -11,12 +11,20 @@ return {
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    -- "rcarriga/nvim-notify",
+    "rcarriga/nvim-notify",
   },
   config = function()
     require("noice").setup({
       views = {
         cmdline_popup = {
+          position = {
+            row = "33%", -- or a number like 40
+            col = "50%", -- or a number like 0 or 10
+          },
+          -- size = {
+          --   width = 60,
+          --   height = "auto",
+          -- },
           -- Example: Disable scrollbar in the command line popup
           border = {
             style = "double",

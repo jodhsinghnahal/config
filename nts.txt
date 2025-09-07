@@ -54,6 +54,7 @@ https://github.com/tiagovla/scope.nvim #each tab has own buffers
 
 https://github.com/lambdalisue/vim-suda?tab=readme-ov-file #use nvim config in sudo nvim
 
+https://github.com/mg979/vim-visual-multi
 
 xev vs evtest. xev uses x11 and evtest uses linux kernel
 https://unix.stackexchange.com/questions/537982/why-do-scancodes-and-keycodes-differ-by-8

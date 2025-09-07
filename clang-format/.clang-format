@@ -1,1 +1,2 @@
-ColumnLimit: 150
+# BasedOnStyle: Microsoft
+ColumnLimit: 140
