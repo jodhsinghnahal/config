@@ -1,0 +1,22 @@
+https://www.altera.com/downloads/fpga-development-tools/quartus-prime-lite-edition-design-software-version-18-1-windows
+
+https://www.youtube.com/watch?v=T-Tg2uEuX6o
+sudo apt install -y libstdc++6:i386 libc6:i386 libx11-dev:i386 libxext-dev:i386 libxau-dev:i386 libxdmcp-dev:i386 libfreetype6:i386 fontconfig:i386 expat:i386 libxrender1:i386 libsm6:i386
+wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
+dpkg -x libpng12-0_1.2.54-1ubuntu1.1_amd64.deb libpng12_amd64
+export LD_LIBRARY_PATH=/home/jodh/libpng12_amd64/lib/x86_64-linux-gnu
+
+https://www.youtube.com/watch?v=HfVTi0vN4Ks
+https://vhdlwhiz.com/modelsim-quartus-prime-lite-ubuntu-20-04/
+
+lsusb
+sudo nano /etc/udev/rules.d/51-usbblaster.rules
+paste in: SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", MODE="0666"
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+cd intelFPGA_lite/18.1/quartus/bin
+./quartus_pgm -l
+
+run modelsim: ~/intelFPGA_lite/*.*/modelsim_ase/bin/vsim
+
+paco tutorial: https://www.youtube.com/watch?v=80ChA1Y8DD8
