@@ -40,3 +40,14 @@ export LD_LIBRARY_PATH=/home/jodh/libpng12_amd64/lib/x86_64-linux-gnu
 
 
 chmod +x ~/.local/bin/quartus
+
+ 2119  sudo apt install -y libstdc++6:i386 libc6:i386 libx11:i386 libxext-dev:i386 libxau-dev:i386 libxdmcp-dev:i386 libfreetype6:i386 fontconfig:i386 expat:i386 libxrender1:i386 libsm6:i386
+ 2120  sudo apt install -y libstdc++6:i386 libc6:i386 libx11-dev:i386 libxext-dev:i386 libxau-dev:i386 libxdmcp-dev:i386 libfreetype6:i386 fontconfig:i386 expat:i386 libxrender1:i386 libsm6:i386
+ 2224  sudo dpkg --add-architecture i386\nsudo apt update\nsudo apt install build-essential\n    sudo apt install gcc-multilib g++-multilib lib32z1 \\n    lib32stdc++6 lib32gcc1 libxt6:i386 libxtst6:i386 expat:i386 \\n    fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 \\n    libgtk-3-0:i386 libcanberra0:i386 libice6:i386 libsm6:i386 \\n    libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 \\n    libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386
+ 2225  sudo dpkg --add-architecture i386\nsudo apt update\nsudo apt install build-essential\n    sudo apt install gcc-multilib g++-multilib lib32z1 \\n    lib32stdc++6 lib32gcc-s1 libxt6:i386 libxtst6:i386 expat:i386 \\n    fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 \\n    libgtk-3-0:i386 libcanberra0:i386 libice6:i386 libsm6:i386 \\n    libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 \\n    libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386\n
+ 2227  wget https://ftp.osuosl.org/pub/blfs/conglomeration/freetype/freetype-2.4.12.tar.bz2
+ 2228  tar xjf freetype-2.4.12.tar.bz2
+ 2229  cd freetype-2.4.12
+ 2238  cp ~/freetype-2.4.12/objs/.libs/libfreetype.so* lib32/
+ 2377  sudo apt install -y libstdc++6:i386 libc6:i386 libx11-dev:i386 libxext-dev:i386 libxau-dev:i386 libxdmcp-dev:i386 libfreetype6:i386 fontconfig:i386 expat:i386 libxrender1:i386 libsm6:i386\n
+
