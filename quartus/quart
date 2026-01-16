@@ -9,6 +9,10 @@ export LD_LIBRARY_PATH=/home/jodh/libpng12_amd64/lib/x86_64-linux-gnu
 https://www.youtube.com/watch?v=HfVTi0vN4Ks
 https://vhdlwhiz.com/modelsim-quartus-prime-lite-ubuntu-20-04/
 
+ 2245  sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 libxft2:i386 libxext6:i386
+ 2246  setarch i386 -R ~/intelFPGA_lite/*.*/modelsim_ase/bin/vsim
+
+
 lsusb
 sudo nano /etc/udev/rules.d/51-usbblaster.rules
 paste in: SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", MODE="0666"
@@ -20,3 +24,19 @@ cd intelFPGA_lite/18.1/quartus/bin
 run modelsim: ~/intelFPGA_lite/*.*/modelsim_ase/bin/vsim
 
 paco tutorial: https://www.youtube.com/watch?v=80ChA1Y8DD8
+
+in ~/.local/bin/modelsim:
+VSIM_PATH="$HOME/intelFPGA_lite/18.1/modelsim_ase/bin/vsim"
+# 3. Execute with -gui forced
+echo "Launching ModelSim..."
+"$VSIM_PATH" -gui "$@"
+
+chmod +x ~/.local/bin/modelsim
+
+
+in ~/.local/bin/quartus:
+export LD_LIBRARY_PATH=/home/jodh/libpng12_amd64/lib/x86_64-linux-gnu
+~/intelFPGA_lite/18.1/quartus/bin/quartus
+
+
+chmod +x ~/.local/bin/quartus
